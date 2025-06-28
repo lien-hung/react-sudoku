@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Square from "./Square";
 
-export default function Board({ sudoku, onPlay }) {
+export default function Board({ initialSudoku, sudoku, onPlay }) {
   const [selectedCell, setSelectedCell] = useState(null);
 
   function handleClick(row, col) {
@@ -53,6 +53,7 @@ export default function Board({ sudoku, onPlay }) {
           isHighlighted={
             selectedCell?.row === row && selectedCell?.col === col
           }
+          isPrefilled={initialSudoku[row][col] !== 0}
         />
       );
     }

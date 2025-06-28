@@ -26,7 +26,7 @@ export default function Game() {
 
   return (
     <div className="game">
-      <Board sudoku={currentSudoku} onPlay={handlePlay} />
+      <Board initialSudoku={history[0]} sudoku={currentSudoku} onPlay={handlePlay} />
       <div className="status">{status || "Valid board"}</div>
     </div>
   )

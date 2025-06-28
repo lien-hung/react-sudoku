@@ -28,6 +28,11 @@ body {
   border: 2px solid #0066cc;
 }
 
+.square.prefilled {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
 .board-row:after {
   clear: both;
   content: '';
